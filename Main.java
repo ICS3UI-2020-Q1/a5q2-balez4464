@@ -1,6 +1,8 @@
+import java.util.Scanner;
+
 /**
- *
- * @author 
+ *This program asks the user for a number than counts up to that number on a single line
+ * @author Zachary Balean 
  */
 public class Main {
 
@@ -9,7 +11,25 @@ public class Main {
    * @param args the command line arguments
    */
   public static void main(String[] args) {
-    // TODO code application logic here
+    // creates Scanner
+    Scanner input = new Scanner(System.in);
+
+    //asks user to input the number
+    System.out.println("Please enter a positive integer");
+    //int for users number
+    int usersNumber = input.nextInt();
+  
+
+    //for loop that will count up to users number and creats count int
+    for(int count = 1; count <= usersNumber; count++){
+      //prints count on one line for no comma
+      if(count == usersNumber){
+        System.out.print(count);
+        //prints count of ot needs a comma
+      }else{
+        System.out.print(count + ", ");
+      }
+    }
     
   }
 }
